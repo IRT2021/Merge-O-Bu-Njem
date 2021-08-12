@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-model href="http://www.stoa.org/epidoc/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv73151">
@@ -7,7 +6,10 @@
       <fileDesc>
          <titleStmt>
             <title>keiner</title>
-         </titleStmt>
+         <editor xml:id="GB" role="translation (English)">Gabriel Bodard</editor>
+            <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>
+            <editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor>
+        </titleStmt>
          <publicationStmt>
             <idno type="filename">73151</idno>
             <idno type="TM">73151</idno>
@@ -38,8 +40,7 @@
                   </origin>
                   <provenance type="located">
                      <p>
-                        <placeName type="ancient"
-                                   ref="http://pleiades.stoa.org/places/344377 http://www.trismegistos.org/place/3135">Golas</placeName>
+                        <placeName type="ancient" ref="http://pleiades.stoa.org/places/344377 http://www.trismegistos.org/place/3135">Golas</placeName>
                         <placeName type="ancient" subtype="region">Africa proconsularis</placeName>
                      </p>
                   </provenance>
@@ -70,6 +71,7 @@
          </textClass>
       </profileDesc>
       <revisionDesc>
+         <change when="2021-08-12" who="#GB">Merged HGV data, Duke Databank text, PE translation from Papyri.info EpiDoc</change>
          <change who="HGV" when="1999-05-05">Record created</change>
          <change who="HGV" when="2011-04-19">Record last modified</change>
          <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
