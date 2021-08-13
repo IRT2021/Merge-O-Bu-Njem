@@ -6,7 +6,7 @@
       <fileDesc>
          <titleStmt>
             <title>keiner</title>
-         <editor xml:id="GB" role="translation (English)">Gabriel Bodard</editor>
+           <editor xml:id="GB" role="translation (English)">Gabriel Bodard</editor>
             <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>
             <editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor>
         </titleStmt>
@@ -71,14 +71,57 @@
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change when="2021-08-12" who="#GB">Merged HGV data, Duke Databank text, PE translation from Papyri.info EpiDoc</change>
+         <change when="2021-08-13" who="#GB">Merged HGV data, Duke Databank text, PE translation from Papyri.info EpiDoc</change>
          <change who="HGV" when="1999-05-05">Record created</change>
          <change who="HGV" when="2011-04-19">Record last modified</change>
          <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
       </revisionDesc>
    </teiHeader>
    <text>
-      <body>
+      <div xml:lang="la" type="edition" xml:space="preserve"><div n="ctr" type="textpart"><ab>
+    
+    <lb n="1"/><gap reason="lost" extent="unknown" unit="character"/><num value="9">viiii</num> <expan>Kal<ex>endas</ex></expan> <expan>Febr<ex>uarias</ex></expan> <expan>n<ex>umerus</ex></expan> <num value="45">xlv</num> 
+
+    <lb n="2"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="3" unit="character"/> i 
+
+    <lb n="3"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="2" unit="character"/> i 
+
+    <lb n="4"/><gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost"> pro</supplied>culcator i 
+
+    <lb n="5"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="4" unit="character"/> 
+
+    <lb n="6"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/>o<gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="1" unit="character"/> 
+
+    <lb n="7"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="1" unit="character"/>es<gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="1" unit="character"/> 
+
+    <lb n="8"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="2" unit="character"/> 
+
+    <lb n="9"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="2" unit="character"/> 
+
+    <lb n="10"/><gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="2" unit="character"/> 
+
+    <lb n="11"/><gap reason="lost" extent="unknown" unit="line"/> 
+</ab></div><div n="md" type="textpart"><ab>
+
+    <lb n="11" rend="perpendicular"/> <gap reason="lost" extent="unknown" unit="character"/><supplied reason="lost"> reliqui repun</supplied>gent xv 
+
+    <lb n="12" rend="perpendicular"/> <gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="lost" extent="unknown" unit="character"/> 
+
+    <lb n="13" rend="perpendicular"/> <gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/> </ab></div></div><div xml:lang="en" type="translation" xml:space="preserve">
+            <div n="ctr" type="textpart">
+               <p>
+                  <milestone unit="line" n="1"/> [...] on the ninth (or nineteenth) day before the kalends of February. A group of forty-five (men).
+                 <milestone unit="line" n="2"/> one [...]
+                 <milestone unit="line" n="3"/> one [...]
+                 <milestone unit="line" n="4"/> one scout [...]
+               </p>
+            </div>
+            <div n="md" type="textpart">
+               <p>
+                  <milestone unit="line" n="11"/>[...] available for redeployment, fifteen [...]
+               </p>
+            </div>
+         </div>
          <div type="commentary" subtype="general">
             <p>Tage: 14. - 24. Jan. Lateinisch.</p>
          </div>
@@ -95,6 +138,6 @@
                <bibl type="illustration">S. 117</bibl>
             </p>
          </div>
-      </body>
+      
    </text>
 </TEI>

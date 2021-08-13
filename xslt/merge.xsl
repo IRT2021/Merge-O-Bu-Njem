@@ -60,10 +60,22 @@
         <xsl:copy>
             <xsl:copy-of select="@*"/>
             <xsl:apply-templates/>
-            <editor xml:id="GB" role="translation (English)">Gabriel Bodard</editor><xsl:text>
+            <xsl:text>  </xsl:text><editor xml:id="GB" role="translation (English)">Gabriel Bodard</editor><xsl:text>
             </xsl:text><editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor><xsl:text>
             </xsl:text><editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor><xsl:text>
         </xsl:text></xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="t:body">
+        <xsl:variable name="hgvno" select="//t:idno[@type='filename']"/>
+        <xsl:variable name="ddbno" select="//t:idno[@type='ddb-filename']"/>
+        <xsl:if test="document(concat('../ddbdp/',$ddbno,'.xml'))">
+            <xsl:apply-templates select="document(concat('../ddbdp/',$ddbno,'.xml'))//t:div[@type='edition']"/>
+        </xsl:if>
+        <xsl:if test="document(concat('../translation/',$hgvno,'.xml'))">
+            <xsl:apply-templates select="document(concat('../translation/',$hgvno,'.xml'))//t:div[@type='translation']"/>
+        </xsl:if>
+        <xsl:apply-templates/>
     </xsl:template>
     
 </xsl:stylesheet>
