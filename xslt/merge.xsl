@@ -19,10 +19,10 @@
     </xsl:template>
     
     <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||| -->
-    <!-- |||||||||||||||| copy processing instructions and comments  |||||||||||||||| -->
+    <!-- |||||||||||||||| copy any comments  |||||||||||||||| -->
     <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||| -->
     
-    <xsl:template match="processing-instruction() | comment()">
+    <xsl:template match="comment()">
         <xsl:copy>
             <xsl:value-of select="."/>
         </xsl:copy>
@@ -56,14 +56,30 @@
     <!-- ||||||||||||||    EXCEPTIONS     |||||||||||||| -->
     <!-- ||||||||||||||||||||||||||||||||||||||||||||||| -->
     
+    <xsl:template match="t:TEI">
+        <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
+        <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"</xsl:processing-instruction>
+        <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
+        <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:processing-instruction>
+        <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
+        <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:processing-instruction>     
+        <xsl:copy>
+            <xsl:apply-templates/>
+        </xsl:copy>
+    </xsl:template>
+    
     <xsl:template match="t:titleStmt">
         <xsl:copy>
             <xsl:copy-of select="@*"/>
             <xsl:apply-templates/>
-            <xsl:text>  </xsl:text><editor xml:id="GB" role="translation (English)">Gabriel Bodard</editor><xsl:text>
-            </xsl:text><editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor><xsl:text>
-            </xsl:text><editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor><xsl:text>
-        </xsl:text></xsl:copy>
+            <xsl:text disable-output-escaping="yes">   </xsl:text>
+            <editor xml:id="GB" role="translation (English)">Gabriel Bodard</editor>
+            <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
+            <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>
+            <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
+            <editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor>
+            <xsl:text disable-output-escaping="yes">&#13;          </xsl:text>
+        </xsl:copy>
     </xsl:template>
     
     <xsl:template match="t:body">
