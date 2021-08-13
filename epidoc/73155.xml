@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.13/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv73155">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>keiner</title>
+           <editor xml:id="GB" role="translation (English)">Gabriel Bodard</editor>
+            <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>
+            <editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor>
+        </titleStmt>
+         <publicationStmt>
+            <idno type="filename">73155</idno>
+            <idno type="TM">73155</idno>
+            <idno type="ddb-perseus-style">0016;;5</idno>
+            <idno type="ddb-filename">o.bu.njem.5</idno>
+            <idno type="ddb-hybrid">o.bu.njem;;5</idno>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <placeName>
+                     <settlement>unbekannt</settlement>
+                  </placeName>
+               </msIdentifier>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material>Ostrakon</material>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origPlace>Golas (Africa proconsularis)</origPlace>
+                     <origDate notBefore="0253" notAfter="0259">253 - 259</origDate>
+                  </origin>
+                  <provenance type="located">
+                     <p>
+                        <placeName type="ancient" ref="http://pleiades.stoa.org/places/344377 http://www.trismegistos.org/place/3135">Golas</placeName>
+                        <placeName type="ancient" subtype="region">Africa proconsularis</placeName>
+                     </p>
+                  </provenance>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <p>This file encoded to comply with EpiDoc Guidelines and Schema version 8
+                <ref>http://www.stoa.org/epidoc/gl/5/</ref>
+         </p>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="fr">Französisch</language>
+            <language ident="en">Englisch</language>
+            <language ident="de">Deutsch</language>
+            <language ident="it">Italienisch</language>
+            <language ident="es">Spanisch</language>
+            <language ident="la">Latein</language>
+            <language ident="el">Griechisch</language>
+         </langUsage>
+         <textClass>
+            <keywords scheme="hgv">
+               <term>Meldung (Tag)</term>
+               <term>Militär</term>
+            </keywords>
+         </textClass>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2021-08-13" who="#GB">Merged HGV data, Duke Databank text, PE translation from Papyri.info EpiDoc</change>
+         <change who="HGV" when="1999-05-05">Record created</change>
+         <change who="HGV" when="2011-04-19">Record last modified</change>
+         <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
+      </revisionDesc>
+   </teiHeader>
+   <text>
+      <div xml:lang="la" type="edition" xml:space="preserve"><ab>
+    <lb n="1"/>xvi <expan><unclear>Kal</unclear><ex>endas</ex></expan> <expan><supplied reason="lost">I</supplied>ul<ex>ias</ex></expan> <expan>n<ex>umerus</ex></expan>        l<unclear>xxxx</unclear>vi 
+
+    <lb n="2"/>tirones                   <expan>n<ex>umerus</ex></expan>        lxiiii 
+
+    <lb n="3"/>in <unclear>h</unclear>is <expan>eq<ex>uites</ex></expan><g type="middot"/>                        iii 
+
+    <lb n="4"/>quintanari                                 xx<unclear>ii</unclear> 
+
+    <lb n="5"/>ad <choice><reg>balneum</reg><orig>balneu</orig></choice>                      viii 
+
+    <lb n="6"/>de speclis                                 <unclear>i</unclear> 
+
+    <lb n="7"/>ad <choice><reg>praepositum</reg><orig>pre<unclear>posi</unclear>tu</orig></choice>                i 
+
+    <lb n="8"/><unclear>ad</unclear> <expan>st<ex>ationem</ex></expan> <unclear>c</unclear><expan>amella<unclear>r</unclear><ex>iorum</ex></expan>             i 
+
+    <lb n="9"/>optio                                      i 
+
+    <lb n="10"/>item Rufus                                 i 
+
+    <lb n="11"/>egri                                       iiii 
+
+    <lb n="12"/>excusant<unclear>ur</unclear>                                 xxviii 
+
+    <lb n="13"/>reliqui munifices                          xxvi 
+
+    <lb n="14"/><unclear>b</unclear><supplied reason="lost">a</supplied>l<supplied reason="lost">n</supplied><unclear>e</unclear><supplied reason="lost">us ac</supplied><unclear>c</unclear><supplied reason="lost">ipit </supplied><gap reason="lost" quantity="3" unit="character"/> 
+
+    <lb n="15"/><supplied reason="lost" cert="low">furnus</supplied> </ab></div>
+         <div type="commentary" subtype="general">
+            <p>Lateinisch. Tag: 16. Juni.</p>
+         </div>
+         <div type="bibliography" subtype="principalEdition">
+            <listBibl>
+               <bibl type="publication" subtype="principal">
+                  <title level="s" type="abbreviated">O.Bu Njem</title>
+                  <biblScope type="numbers">5</biblScope>
+               </bibl>
+            </listBibl>
+         </div>
+         <div type="bibliography" subtype="illustrations">
+            <p>
+               <bibl type="illustration">S. 122</bibl>
+            </p>
+         </div>
+      
+   </text>
+</TEI>

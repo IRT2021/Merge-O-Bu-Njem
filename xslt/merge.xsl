@@ -69,10 +69,10 @@
     <xsl:template match="t:body">
         <xsl:variable name="hgvno" select="//t:idno[@type='filename']"/>
         <xsl:variable name="ddbno" select="//t:idno[@type='ddb-filename']"/>
-        <xsl:if test="document(concat('../ddbdp/',$ddbno,'.xml'))">
+        <xsl:if test="doc-available(concat('../ddbdp/',$ddbno,'.xml'))">
             <xsl:apply-templates select="document(concat('../ddbdp/',$ddbno,'.xml'))//t:div[@type='edition']"/>
         </xsl:if>
-        <xsl:if test="document(concat('../translation/',$hgvno,'.xml'))">
+        <xsl:if test="doc-available(concat('../translation/',$hgvno,'.xml'))">
             <xsl:apply-templates select="document(concat('../translation/',$hgvno,'.xml'))//t:div[@type='translation']"/>
         </xsl:if>
         <xsl:apply-templates/>
