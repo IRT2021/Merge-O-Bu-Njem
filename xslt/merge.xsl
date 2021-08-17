@@ -62,8 +62,10 @@
         <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
         <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:processing-instruction>
         <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
-        <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:processing-instruction>     
+        <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:processing-instruction>
+        <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
         <xsl:copy>
+            <xsl:copy-of select="@*"/>
             <xsl:apply-templates/>
         </xsl:copy>
     </xsl:template>
@@ -82,16 +84,55 @@
         </xsl:copy>
     </xsl:template>
     
+    <xsl:template match="t:publicationStmt">
+        <xsl:copy>
+            <xsl:copy-of select="@*"/>
+            <authority>King's College London</authority>
+            <xsl:apply-templates/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="t:origPlace">
+        <xsl:copy>
+            <xsl:text>Findspot.</xsl:text>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="t:provenance[@type='located']">
+        <provenance type="found">
+            <p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu-Ngem</placeName>: <placeName ref="https://www.slsgazetteer.org/826">Fort</placeName> from one of the gates.</p>
+        </provenance>
+        <provenance type="observed">
+            <p><placeName ref="https://www.slsgazetteer.org/1098">Tripoli Castle</placeName>.</p>
+        </provenance>
+    </xsl:template>
+    
     <xsl:template match="t:body">
         <xsl:variable name="hgvno" select="//t:idno[@type='filename']"/>
         <xsl:variable name="ddbno" select="//t:idno[@type='ddb-filename']"/>
-        <xsl:if test="doc-available(concat('../ddbdp/',$ddbno,'.xml'))">
-            <xsl:apply-templates select="document(concat('../ddbdp/',$ddbno,'.xml'))//t:div[@type='edition']"/>
-        </xsl:if>
-        <xsl:if test="doc-available(concat('../translation/',$hgvno,'.xml'))">
-            <xsl:apply-templates select="document(concat('../translation/',$hgvno,'.xml'))//t:div[@type='translation']"/>
-        </xsl:if>
-        <xsl:apply-templates/>
+        <xsl:copy>
+            <xsl:copy-of select="@*"/>
+            <xsl:if test="doc-available(concat('../ddbdp/',$ddbno,'.xml'))">
+                <xsl:apply-templates select="document(concat('../ddbdp/',$ddbno,'.xml'))//t:div[@type='edition']"/>
+            </xsl:if>
+            <xsl:if test="doc-available(concat('../translation/',$hgvno,'.xml'))">
+                <xsl:apply-templates select="document(concat('../translation/',$hgvno,'.xml'))//t:div[@type='translation']"/>
+            </xsl:if>
+            <xsl:apply-templates/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="t:expan/text()">
+        <abbr><xsl:value-of select="."/></abbr>
+    </xsl:template>
+    
+    <xsl:template match="t:biblScope">
+        <citedRange>
+            <xsl:if test="@type">
+                <xsl:attribute name="unit" select="@type"/>
+            </xsl:if>
+            <xsl:apply-templates/>
+        </citedRange>
     </xsl:template>
     
 </xsl:stylesheet>
