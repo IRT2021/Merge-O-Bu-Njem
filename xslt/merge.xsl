@@ -87,6 +87,7 @@
     <xsl:template match="t:publicationStmt">
         <xsl:copy>
             <xsl:copy-of select="@*"/>
+            <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
             <authority>King's College London</authority>
             <xsl:apply-templates/>
         </xsl:copy>
