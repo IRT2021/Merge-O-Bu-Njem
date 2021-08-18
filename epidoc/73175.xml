@@ -1,14 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.stoa.org/epidoc/schema/8.13/tei-epidoc.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv73175">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://epidoc.stoa.org/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="hgv73175">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>keiner</title>
-           <editor xml:id="GB" role="translation (English)">Gabriel Bodard</editor>
-            <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>
-            <editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor>
-        </titleStmt>
-         <publicationStmt>
+            <editor xml:id="GB" role="translation (English)">Gabriel Bodard</editor>            <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>            <editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor>          </titleStmt>
+         <publicationStmt><authority>King's College London</authority>
             <idno type="filename">73175</idno>
             <idno type="TM">73175</idno>
             <idno type="ddb-perseus-style">0016;;25</idno>
@@ -33,15 +29,10 @@
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>Golas (Africa proconsularis)</origPlace>
+                     <origPlace>Findspot.</origPlace>
                      <origDate notBefore="0253" notAfter="0259">253 - 259</origDate>
                   </origin>
-                  <provenance type="located">
-                     <p>
-                        <placeName type="ancient" ref="http://pleiades.stoa.org/places/344377 http://www.trismegistos.org/place/3135">Golas</placeName>
-                        <placeName type="ancient" subtype="region">Africa proconsularis</placeName>
-                     </p>
-                  </provenance>
+                  <provenance type="found"><p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu-Ngem</placeName>: <placeName ref="https://www.slsgazetteer.org/826">Fort</placeName> from one of the gates.</p></provenance><provenance type="observed"><p><placeName ref="https://www.slsgazetteer.org/1098">Tripoli Castle</placeName>.</p></provenance>
                </history>
             </msDesc>
          </sourceDesc>
@@ -69,17 +60,17 @@
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change when="2021-08-13" who="#GB">Merged HGV data, Duke Databank text, PE translation from Papyri.info EpiDoc</change>
+         <change when="2021-08-18" who="#GB">Merged HGV data, Duke Databank text, PE translation from Papyri.info EpiDoc</change>
          <change who="HGV" when="1999-05-05">Record created</change>
          <change who="HGV" when="2011-04-19">Record last modified</change>
          <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
       </revisionDesc>
    </teiHeader>
    <text>
-      <div xml:lang="la" type="edition" xml:space="preserve"><ab>
-    <lb n="1"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="3" unit="character"/> <expan>n<ex>umerus</ex></expan>                            x<unclear>liiii</unclear><gap reason="lost" extent="unknown" unit="character"/> 
+      <body><div xml:lang="la" type="edition" xml:space="preserve"><ab>
+    <lb n="1"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="3" unit="character"/> <expan><abbr>n</abbr><ex>umerus</ex></expan>                            x<unclear>liiii</unclear><gap reason="lost" extent="unknown" unit="character"/> 
 
-    <lb n="2"/><unclear>ex</unclear> <unclear>is</unclear> <expan>lib<unclear>r</unclear><ex>arius</ex></expan>                            i 
+    <lb n="2"/><unclear>ex</unclear> <unclear>is</unclear> <expan><abbr>lib</abbr><unclear>r</unclear><ex>arius</ex></expan>                            i 
 
     <lb n="3"/><supplied reason="lost">optio</supplied>                                      i 
 
@@ -93,9 +84,9 @@
 
     <lb n="8"/>egri                                         ii 
 
-    <lb n="9"/>Pacci<unclear>u</unclear>s <expan>Max<ex>imus</ex></expan> <expan>Iul<ex>ius</ex></expan> Secundarius i<unclear>i</unclear> 
+    <lb n="9"/>Pacci<unclear>u</unclear>s <expan><abbr>Max</abbr><ex>imus</ex></expan> <expan><abbr>Iul</abbr><ex>ius</ex></expan> Secundarius i<unclear>i</unclear> 
 
-    <lb n="10"/><expan>rel<ex>iqui</ex></expan> repungent <expan>s<ex>umma</ex></expan> xviiii balneus 
+    <lb n="10"/><expan><abbr>rel</abbr><ex>iqui</ex></expan> repungent <expan><abbr>s</abbr><ex>umma</ex></expan> xviiii balneus 
 
     <lb n="11"/>accipit xii fornarius vii </ab></div><div xml:lang="en" type="translation" xml:space="preserve">
             <p>
@@ -110,15 +101,11 @@ for redeployment total 19; baths receive 12, the ovens 7.
             <listBibl>
                <bibl type="publication" subtype="principal">
                   <title level="s" type="abbreviated">O.Bu Njem</title>
-                  <biblScope type="numbers">25</biblScope>
+                  <citedRange unit="numbers">25</citedRange>
                </bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="illustrations">
-            <p>
-               <bibl type="illustration">S. 142</bibl>
-            </p>
-         </div>
-      
+         
+      </body>
    </text>
 </TEI>

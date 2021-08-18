@@ -4,7 +4,7 @@
          <titleStmt>
             <title>keiner</title>
             <editor xml:id="GB" role="translation (English)">Gabriel Bodard</editor>            <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>            <editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor>          </titleStmt>
-         <publicationStmt><authority>King's College London</authority>
+         <publicationStmt><authority>King's College London</authority>
             <idno type="filename">73151</idno>
             <idno type="TM">73151</idno>
             <idno type="ddb-perseus-style">0016;;1</idno>
@@ -60,7 +60,7 @@
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change when="2021-08-17" who="#GB">Merged HGV data, Duke Databank text, PE translation from Papyri.info EpiDoc</change>
+         <change when="2021-08-18" who="#GB">Merged HGV data, Duke Databank text, PE translation from Papyri.info EpiDoc</change>
          <change who="HGV" when="1999-05-05">Record created</change>
          <change who="HGV" when="2011-04-19">Record last modified</change>
          <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
@@ -122,11 +122,7 @@
                </bibl>
             </listBibl>
          </div>
-         <div type="bibliography" subtype="illustrations">
-            <p>
-               <bibl type="illustration">S. 117</bibl>
-            </p>
-         </div>
+         
       </body>
    </text>
 </TEI>

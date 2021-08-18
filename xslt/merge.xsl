@@ -127,6 +127,8 @@
         <abbr><xsl:value-of select="."/></abbr>
     </xsl:template>
     
+    <xsl:template match="t:div[@type='bibliography'][@subtype='illustrations']"/>
+    
     <xsl:template match="t:biblScope">
         <citedRange>
             <xsl:if test="@type">
