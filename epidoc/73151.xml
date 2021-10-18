@@ -43,7 +43,7 @@
                <term>Meldung (Tag)</term>
                <term>Militär</term>
             </keywords>
-         </textClass>
+         </textClass><textClass><keywords scheme="IRCyr"><term><geogName type="ancientRegion" key="Tripolitania">Tripolitania</geogName></term><term><geogName type="modernCountry" key="LY">Libya</geogName></term><term><placeName type="modernFindspot" key="https://www.slsgazetteer.org/658">Bu Ngem</placeName></term></keywords></textClass>
       </profileDesc>
       <revisionDesc>
          <change when="2021-10-18" who="#GB">Merged HGV data, Duke Databank text, PE translation from Papyri.info EpiDoc</change>
