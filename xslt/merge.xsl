@@ -112,24 +112,61 @@
         </xsl:copy>
     </xsl:template>
     
+    <xsl:template match="t:origDate">
+        <xsl:copy>
+            <xsl:copy-of select="@*"/>
+            <xsl:attribute name="evidence" select="'occupation'"/>
+            <xsl:apply-templates/>
+        </xsl:copy>
+    </xsl:template>
+    
     <xsl:template match="t:provenance[@type='located']">
         <provenance type="found">
             <p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu-Ngem</placeName>: <placeName type="monuList" ref="https://www.slsgazetteer.org/826">Fort</placeName>.</p>
         </provenance>
         <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
         <provenance type="observed">
-            <p><placeName ref="https://www.slsgazetteer.org/1098">Tripoli National Museum</placeName>.</p>
+            <p><placeName type="monuList" ref="https://www.slsgazetteer.org/1098">Tripoli National Museum</placeName>.</p>
         </provenance>
     </xsl:template>
     
-    <xsl:template match="t:supportDesc">
+    <xsl:template match="t:objectDesc">
         <xsl:copy>
-            <support><p><material>Ceramic</material> <objectType>ostrakon</objectType>.</p></support>
+            <supportDesc>
+             <support><p><material>Ceramic</material> <objectType>ostrakon</objectType>.</p></support>
+         </supportDesc>
+         <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
+         <layoutDesc>
+             <layout><rs type="execution" key="dipinti">Painted</rs> on one face.</layout>
+         </layoutDesc>
+            <handDesc><handNote></handNote></handDesc>
         </xsl:copy>
-        <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
-        <layoutDesc>
-            <layout><rs type="execution" key="dipinti">Painted</rs> on one face.</layout>
-        </layoutDesc>
+    </xsl:template>
+    
+    <xsl:template match="t:encodingDesc">
+        <encodingDesc>
+            <p>Marked-up according to the EpiDoc Guidelines version 9.</p>
+        </encodingDesc>
+    </xsl:template>
+    
+    <xsl:template match="t:textClass">
+        <xsl:copy>
+           <xsl:copy-of select="@*"/>
+           <xsl:apply-templates/>
+        </xsl:copy>
+        <textClass>
+            <keywords scheme="IRCyr">
+                <term>
+                    <geogName type="ancientRegion" key="Tripolitania">Tripolitania</geogName>
+                </term>
+                <term>
+                    <geogName type="modernCountry" key="LY">Libya</geogName>
+                </term>
+                <term>
+                    <placeName type="modernFindspot" key="https://www.slsgazetteer.org/658">Bu Ngem</placeName>
+                </term>
+            </keywords>
+        </textClass>
     </xsl:template>
     
     <xsl:template match="t:body">

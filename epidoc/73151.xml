@@ -15,25 +15,19 @@
             <msDesc>
                <msIdentifier><repository ref="institution.xml#db1098">Tripoli National Museum</repository><idno/></msIdentifier>
                <physDesc>
-                  <objectDesc>
-                     <supportDesc><support><p><material>Ceramic</material><objectType>ostrakon</objectType>.</p></support></supportDesc>            <layoutDesc><layout><rs type="execution" key="dipinti">Painted</rs> on one face.</layout></layoutDesc>
-                  </objectDesc>
+                  <objectDesc><supportDesc><support><p><material>Ceramic</material><objectType>ostrakon</objectType>.</p></support></supportDesc>            <layoutDesc><layout><rs type="execution" key="dipinti">Painted</rs> on one face.</layout></layoutDesc><handDesc><handNote/></handDesc></objectDesc>
                </physDesc>
                <history>
                   <origin>
                      <origPlace>Findspot.</origPlace>
-                     <origDate notBefore="0253" notAfter="0259">253 - 259</origDate>
+                     <origDate notBefore="0253" notAfter="0259" evidence="occupation">253 - 259</origDate>
                   </origin>
-                  <provenance type="found"><p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu-Ngem</placeName>: <placeName type="monuList" ref="https://www.slsgazetteer.org/826">Fort</placeName>.</p></provenance>            <provenance type="observed"><p><placeName ref="https://www.slsgazetteer.org/1098">Tripoli National Museum</placeName>.</p></provenance>
+                  <provenance type="found"><p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu-Ngem</placeName>: <placeName type="monuList" ref="https://www.slsgazetteer.org/826">Fort</placeName>.</p></provenance>            <provenance type="observed"><p><placeName type="monuList" ref="https://www.slsgazetteer.org/1098">Tripoli National Museum</placeName>.</p></provenance>
                </history>
             </msDesc>
          </sourceDesc>
       </fileDesc>
-      <encodingDesc>
-         <p>This file encoded to comply with EpiDoc Guidelines and Schema version 8
-                <ref>http://www.stoa.org/epidoc/gl/5/</ref>
-         </p>
-      </encodingDesc>
+      <encodingDesc><p>Marked-up according to the EpiDoc Guidelines version 9.</p></encodingDesc>
       <profileDesc>
          <langUsage>
             <language ident="fr">Französisch</language>
