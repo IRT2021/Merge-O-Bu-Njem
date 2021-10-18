@@ -89,8 +89,8 @@
             <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
             <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>
             <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
-            <editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor>
-            <xsl:text disable-output-escaping="yes">&#13;          </xsl:text>
+            <!--<editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor>
+            <xsl:text disable-output-escaping="yes">&#13;          </xsl:text>-->
         </xsl:copy>
     </xsl:template>
     
@@ -217,7 +217,9 @@
             <ptr target="OBuNjem"/>
             <xsl:text> </xsl:text>
             <xsl:apply-templates select="t:biblScope"/>
-        </xsl:copy>
+        </xsl:copy><xsl:text>; </xsl:text>
+        <bibl><title>Heidelberger Gesamtverzeichnis</title><xsl:text> </xsl:text><citedRange><xsl:value-of select="//idno[@type='filename']"/></citedRange></bibl><xsl:text>, </xsl:text>
+        <bibl><title>Duke Databank of Documentary Papyri</title><xsl:text> </xsl:text><citedRange><xsl:value-of select="//idno[@type='ddb-filename']"/></citedRange></bibl>.
     </xsl:template>
     
     <xsl:template match="t:biblScope">
