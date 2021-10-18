@@ -46,7 +46,7 @@
                 <xsl:attribute name="who">
                     <xsl:text>#GB</xsl:text>
                 </xsl:attribute>
-                <xsl:text>Merged HGV data, Duke Databank text, PE translation from Papyri.info EpiDoc</xsl:text>
+                <xsl:text>Merged HGV data, Duke Databank text, PE translation from Papyri.info EpiDoc; aligned structure to IRT</xsl:text>
             </xsl:element>
             <xsl:apply-templates/>
         </xsl:copy>
@@ -139,8 +139,9 @@
          <layoutDesc>
              <layout><rs type="execution" key="dipinti">Painted</rs> on one face.</layout>
          </layoutDesc>
-            <handDesc><handNote></handNote></handDesc>
         </xsl:copy>
+        <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
+            <handDesc><handNote></handNote></handDesc>
     </xsl:template>
     
     <xsl:template match="t:encodingDesc">
@@ -163,7 +164,7 @@
                     <geogName type="modernCountry" key="LY">Libya</geogName>
                 </term>
                 <term>
-                    <placeName type="modernFindspot" key="https://www.slsgazetteer.org/658">Bu Ngem</placeName>
+                    <placeName type="modernFindspot" key="https://www.slsgazetteer.org/658">Bu Njem</placeName>
                 </term>
             </keywords>
         </textClass>
@@ -175,6 +176,7 @@
         <xsl:copy>
             <xsl:copy-of select="@*"/>
             <xsl:if test="doc-available(concat('../ddbdp/',$ddbno,'.xml'))">
+                <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
                 <xsl:apply-templates select="document(concat('../ddbdp/',$ddbno,'.xml'))//t:div[@type='edition']"/>
             </xsl:if>
             <!--<xsl:if test="doc-available(concat('../translation/',$hgvno,'.xml'))">
