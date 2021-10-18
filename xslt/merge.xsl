@@ -99,6 +99,13 @@
         <idno type="hgv"><xsl:value-of select="."/></idno>
     </xsl:template>
     
+    <xsl:template match="t:msIdentifier">
+        <msIdentifier>
+            <repository ref="institution.xml#db1098">Tripoli National Museum</repository>
+            <idno/>
+        </msIdentifier>
+    </xsl:template>
+    
     <xsl:template match="t:origPlace">
         <xsl:copy>
             <xsl:text>Findspot.</xsl:text>
@@ -107,11 +114,22 @@
     
     <xsl:template match="t:provenance[@type='located']">
         <provenance type="found">
-            <p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu-Ngem</placeName>: <placeName ref="https://www.slsgazetteer.org/826">Fort</placeName> from one of the gates.</p>
+            <p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu-Ngem</placeName>: <placeName type="monuList" ref="https://www.slsgazetteer.org/826">Fort</placeName>.</p>
         </provenance>
+        <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
         <provenance type="observed">
-            <p><placeName ref="https://www.slsgazetteer.org/1098">Tripoli Castle</placeName>.</p>
+            <p><placeName ref="https://www.slsgazetteer.org/1098">Tripoli National Museum</placeName>.</p>
         </provenance>
+    </xsl:template>
+    
+    <xsl:template match="t:supportDesc">
+        <xsl:copy>
+            <support><p><material>Ceramic</material> <objectType>ostrakon</objectType>.</p></support>
+        </xsl:copy>
+        <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
+        <layoutDesc>
+            <layout><rs type="execution" key="dipinti">Painted</rs> on one face.</layout>
+        </layoutDesc>
     </xsl:template>
     
     <xsl:template match="t:body">
@@ -123,6 +141,7 @@
                 <xsl:apply-templates select="document(concat('../ddbdp/',$ddbno,'.xml'))//t:div[@type='edition']"/>
             </xsl:if>
             <!--<xsl:if test="doc-available(concat('../translation/',$hgvno,'.xml'))">
+                <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
                 <xsl:apply-templates select="document(concat('../translation/',$hgvno,'.xml'))//t:div[@type='translation']"/>
             </xsl:if>-->
             <xsl:apply-templates/>

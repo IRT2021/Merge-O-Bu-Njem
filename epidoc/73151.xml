@@ -13,18 +13,10 @@
          </publicationStmt>
          <sourceDesc>
             <msDesc>
-               <msIdentifier>
-                  <placeName>
-                     <settlement>unbekannt</settlement>
-                  </placeName>
-               </msIdentifier>
+               <msIdentifier><repository ref="institution.xml#db1098">Tripoli National Museum</repository><idno/></msIdentifier>
                <physDesc>
                   <objectDesc>
-                     <supportDesc>
-                        <support>
-                           <material>Ostrakon</material>
-                        </support>
-                     </supportDesc>
+                     <supportDesc><support><p><material>Ceramic</material><objectType>ostrakon</objectType>.</p></support></supportDesc>            <layoutDesc><layout><rs type="execution" key="dipinti">Painted</rs> on one face.</layout></layoutDesc>
                   </objectDesc>
                </physDesc>
                <history>
@@ -32,7 +24,7 @@
                      <origPlace>Findspot.</origPlace>
                      <origDate notBefore="0253" notAfter="0259">253 - 259</origDate>
                   </origin>
-                  <provenance type="found"><p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu-Ngem</placeName>: <placeName ref="https://www.slsgazetteer.org/826">Fort</placeName> from one of the gates.</p></provenance><provenance type="observed"><p><placeName ref="https://www.slsgazetteer.org/1098">Tripoli Castle</placeName>.</p></provenance>
+                  <provenance type="found"><p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu-Ngem</placeName>: <placeName type="monuList" ref="https://www.slsgazetteer.org/826">Fort</placeName>.</p></provenance>            <provenance type="observed"><p><placeName ref="https://www.slsgazetteer.org/1098">Tripoli National Museum</placeName>.</p></provenance>
                </history>
             </msDesc>
          </sourceDesc>
