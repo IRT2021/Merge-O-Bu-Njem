@@ -7,6 +7,29 @@
     
     <xsl:output encoding="UTF-8" method="xml" indent="no"/>
     
+    <!-- RESULT DOCUMENT -->
+    
+    <xsl:variable name="irtno" select="concat('IRT',(number(//t:idno[@type='filename']) - 71650))"/>
+    
+    <xsl:template match="t:TEI">    
+        <xsl:result-document href="../epidoc/{$irtno}.xml">
+                    <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
+                    <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"</xsl:processing-instruction>
+                    <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
+                    <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:processing-instruction>
+                    <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
+                    <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:processing-instruction>
+                    <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
+                    <xsl:copy>
+                        <xsl:copy-of select="@xmlns"/>
+                        <xsl:attribute name="xml:lang">en</xsl:attribute>
+                        <xsl:attribute name="xml:id"><xsl:value-of select="$irtno"/></xsl:attribute>
+                        <xsl:apply-templates/>
+                    </xsl:copy>
+        </xsl:result-document>
+    </xsl:template>
+    
+    
     <!-- ||||||||||||||||||||||||||||||||||||||||||||||| -->
     <!-- |||||||||  copy all existing elements ||||||||| -->
     <!-- ||||||||||||||||||||||||||||||||||||||||||||||| -->
@@ -56,20 +79,7 @@
     <!-- ||||||||||||||    EXCEPTIONS     |||||||||||||| -->
     <!-- ||||||||||||||||||||||||||||||||||||||||||||||| -->
     
-    <xsl:template match="t:TEI">
-        <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
-        <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"</xsl:processing-instruction>
-        <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
-        <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:processing-instruction>
-        <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
-        <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:processing-instruction>
-        <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
-        <xsl:copy>
-            <xsl:copy-of select="@*"/>
-            <xsl:apply-templates/>
-        </xsl:copy>
-    </xsl:template>
-    
+       
     <xsl:template match="t:titleStmt">
         <xsl:copy>
             <xsl:copy-of select="@*"/>
@@ -94,7 +104,7 @@
     </xsl:template>
     
     <xsl:template match="t:idno[@type='filename']">
-        <idno type="filename"><xsl:value-of select="concat('IRT',(number(.) - 71650))"/></idno>
+        <idno type="filename"><xsl:value-of select="$irtno"/></idno>
         <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
         <idno type="hgv"><xsl:value-of select="."/></idno>
     </xsl:template>
@@ -155,6 +165,7 @@
            <xsl:copy-of select="@*"/>
            <xsl:apply-templates/>
         </xsl:copy>
+        <xsl:text disable-output-escaping="yes">&#13;         </xsl:text>
         <textClass>
             <keywords scheme="IRCyr">
                 <term>
