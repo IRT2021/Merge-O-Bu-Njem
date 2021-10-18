@@ -14,9 +14,9 @@
     <xsl:template match="t:TEI">    
         <xsl:result-document href="../epidoc/{$irtno}.xml">
                     <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
-                    <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"</xsl:processing-instruction>
+                    <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/9.2/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"</xsl:processing-instruction>
                     <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
-                    <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:processing-instruction>
+                    <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/9.2/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:processing-instruction>
                     <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
                     <xsl:processing-instruction name="xml-model">href="http://epidoc.stoa.org/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"</xsl:processing-instruction>
                     <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
@@ -132,7 +132,7 @@
     
     <xsl:template match="t:provenance[@type='located']">
         <provenance type="found">
-            <p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu-Ngem</placeName>: <placeName type="monuList" ref="https://www.slsgazetteer.org/826">Fort</placeName>.</p>
+            <p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu Njem</placeName>: <placeName type="monuList" ref="https://www.slsgazetteer.org/826">Fort</placeName>.</p>
         </provenance>
         <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
         <provenance type="observed">
@@ -143,7 +143,7 @@
     <xsl:template match="t:objectDesc">
         <xsl:copy>
             <supportDesc>
-             <support><p><material>Ceramic</material> <objectType>ostrakon</objectType>.</p></support>
+             <support><p><material>Ceramic</material><xsl:text> </xsl:text><objectType>ostrakon</objectType>.</p></support>
          </supportDesc>
          <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
          <layoutDesc>
@@ -215,6 +215,7 @@
     <xsl:template match="t:bibl">
         <xsl:copy>
             <ptr target="OBuNjem"/>
+            <xsl:text> </xsl:text>
             <xsl:apply-templates select="t:biblScope"/>
         </xsl:copy>
     </xsl:template>

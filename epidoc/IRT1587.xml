@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://epidoc.stoa.org/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="IRT1587">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://epidoc.stoa.org/schema/9.2/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://epidoc.stoa.org/schema/9.2/tei-epidoc.rng" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="http://epidoc.stoa.org/schema/dev/ircyr-checking.sch" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="IRT1587">
    <teiHeader>
       <fileDesc>
          <titleStmt>
@@ -15,14 +15,14 @@
             <msDesc>
                <msIdentifier><repository ref="institution.xml#db1098">Tripoli National Museum</repository><idno/></msIdentifier>
                <physDesc>
-                  <objectDesc><supportDesc><support><p><material>Ceramic</material><objectType>ostrakon</objectType>.</p></support></supportDesc>            <layoutDesc><layout><rs type="execution" key="dipinti">Painted</rs> on one face.</layout></layoutDesc></objectDesc>            <handDesc><handNote/></handDesc>
+                  <objectDesc><supportDesc><support><p><material>Ceramic</material> <objectType>ostrakon</objectType>.</p></support></supportDesc>            <layoutDesc><layout><rs type="execution" key="dipinti">Painted</rs> on one face.</layout></layoutDesc></objectDesc>            <handDesc><handNote/></handDesc>
                </physDesc>
                <history>
                   <origin>
                      <origPlace>Findspot.</origPlace>
                      <origDate notBefore="0253" notAfter="0259" evidence="occupation">253 - 259</origDate>
                   </origin>
-                  <provenance type="found"><p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu-Ngem</placeName>: <placeName type="monuList" ref="https://www.slsgazetteer.org/826">Fort</placeName>.</p></provenance>            <provenance type="observed"><p><placeName type="monuList" ref="https://www.slsgazetteer.org/1098">Tripoli National Museum</placeName>.</p></provenance>
+                  <provenance type="found"><p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu Njem</placeName>: <placeName type="monuList" ref="https://www.slsgazetteer.org/826">Fort</placeName>.</p></provenance>            <provenance type="observed"><p><placeName type="monuList" ref="https://www.slsgazetteer.org/1098">Tripoli National Museum</placeName>.</p></provenance>
                </history>
             </msDesc>
          </sourceDesc>
@@ -72,12 +72,12 @@
          <div type="commentary" subtype="general">
             <p>Lateinisch.</p>
          </div>
-         <div type="bibliography">            <p><bibl><ptr target="OBuNjem"/><citedRange unit="numbers">87</citedRange></bibl></p></div>
+         <div type="bibliography">            <p><bibl><ptr target="OBuNjem"/> <citedRange unit="numbers">87</citedRange></bibl></p></div>
          
          <div type="bibliography" subtype="otherPublications">
             <head>Andere Publikation</head>
             <listBibl>
-               <bibl><ptr target="OBuNjem"/></bibl>
+               <bibl><ptr target="OBuNjem"/> </bibl>
             </listBibl>
          </div>
       </body>
