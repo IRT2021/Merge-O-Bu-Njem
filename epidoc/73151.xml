@@ -3,9 +3,9 @@
       <fileDesc>
          <titleStmt>
             <title>keiner</title>
-            <editor xml:id="GB" role="translation (English)">Gabriel Bodard</editor>            <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>            <editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor>          </titleStmt>
-         <publicationStmt><authority>King's College London</authority>
-            <idno type="filename">73151</idno>
+            <editor xml:id="GB" role="translation (English); merge script">Gabriel Bodard</editor>            <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>            <editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor>          </titleStmt>
+         <publicationStmt><authority>Centre for Computing in the Humanities, King's College London</authority>
+            <idno type="filename">IRT1501</idno>            <idno type="hgv">73151</idno>
             <idno type="TM">73151</idno>
             <idno type="ddb-perseus-style">0016;;1</idno>
             <idno type="ddb-filename">o.bu.njem.1</idno>
@@ -60,7 +60,7 @@
          </textClass>
       </profileDesc>
       <revisionDesc>
-         <change when="2021-08-18" who="#GB">Merged HGV data, Duke Databank text, PE translation from Papyri.info EpiDoc</change>
+         <change when="2021-10-18" who="#GB">Merged HGV data, Duke Databank text, PE translation from Papyri.info EpiDoc</change>
          <change who="HGV" when="1999-05-05">Record created</change>
          <change who="HGV" when="2011-04-19">Record last modified</change>
          <change when="2011-04-20" who="IDP">Crosswalked to EpiDoc XML</change>
@@ -96,21 +96,7 @@
 
     <lb n="12" rend="perpendicular"/> <gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="lost" extent="unknown" unit="character"/> 
 
-    <lb n="13" rend="perpendicular"/> <gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/> </ab></div></div><div xml:lang="en" type="translation" xml:space="preserve">
-            <div n="ctr" type="textpart">
-               <p>
-                  <milestone unit="line" n="1"/> [...] on the ninth (or nineteenth) day before the kalends of February. A group of forty-five (men).
-                 <milestone unit="line" n="2"/> one [...]
-                 <milestone unit="line" n="3"/> one [...]
-                 <milestone unit="line" n="4"/> one scout [...]
-               </p>
-            </div>
-            <div n="md" type="textpart">
-               <p>
-                  <milestone unit="line" n="11"/>[...] available for redeployment, fifteen [...]
-               </p>
-            </div>
-         </div>
+    <lb n="13" rend="perpendicular"/> <gap reason="lost" extent="unknown" unit="character"/><gap reason="illegible" quantity="4" unit="character"/><gap reason="illegible" quantity="2" unit="character"/><gap reason="lost" extent="unknown" unit="character"/> </ab></div></div>
          <div type="commentary" subtype="general">
             <p>Tage: 14. - 24. Jan. Lateinisch.</p>
          </div>

@@ -75,7 +75,7 @@
             <xsl:copy-of select="@*"/>
             <xsl:apply-templates/>
             <xsl:text disable-output-escaping="yes">   </xsl:text>
-            <editor xml:id="GB" role="translation (English)">Gabriel Bodard</editor>
+            <editor xml:id="GB" role="translation (English); merge script">Gabriel Bodard</editor>
             <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
             <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>
             <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
@@ -88,9 +88,15 @@
         <xsl:copy>
             <xsl:copy-of select="@*"/>
             <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
-            <authority>King's College London</authority>
+            <authority>Centre for Computing in the Humanities, King's College London</authority>
             <xsl:apply-templates/>
         </xsl:copy>
+    </xsl:template>
+    
+    <xsl:template match="t:idno[@type='filename']">
+        <idno type="filename"><xsl:value-of select="concat('IRT',(number(.) - 71650))"/></idno>
+        <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
+        <idno type="hgv"><xsl:value-of select="."/></idno>
     </xsl:template>
     
     <xsl:template match="t:origPlace">
@@ -116,9 +122,9 @@
             <xsl:if test="doc-available(concat('../ddbdp/',$ddbno,'.xml'))">
                 <xsl:apply-templates select="document(concat('../ddbdp/',$ddbno,'.xml'))//t:div[@type='edition']"/>
             </xsl:if>
-            <xsl:if test="doc-available(concat('../translation/',$hgvno,'.xml'))">
+            <!--<xsl:if test="doc-available(concat('../translation/',$hgvno,'.xml'))">
                 <xsl:apply-templates select="document(concat('../translation/',$hgvno,'.xml'))//t:div[@type='translation']"/>
-            </xsl:if>
+            </xsl:if>-->
             <xsl:apply-templates/>
         </xsl:copy>
     </xsl:template>
