@@ -218,8 +218,8 @@
             <xsl:text> </xsl:text>
             <xsl:apply-templates select="t:biblScope"/>
         </xsl:copy><xsl:text>; </xsl:text>
-        <bibl><title>Heidelberger Gesamtverzeichnis</title><xsl:text> </xsl:text><citedRange><xsl:value-of select="//idno[@type='filename']"/></citedRange></bibl><xsl:text>, </xsl:text>
-        <bibl><title>Duke Databank of Documentary Papyri</title><xsl:text> </xsl:text><citedRange><xsl:value-of select="//idno[@type='ddb-filename']"/></citedRange></bibl>.
+        <bibl><title>Heidelberger Gesamtverzeichnis</title><xsl:text> </xsl:text><citedRange><xsl:value-of select="//t:idno[@type='filename']"/></citedRange></bibl><xsl:text>, </xsl:text>
+        <bibl><title>Duke Databank of Documentary Papyri</title><xsl:text> </xsl:text><citedRange><xsl:value-of select="//t:idno[@type='ddb-filename']"/></citedRange></bibl>.
     </xsl:template>
     
     <xsl:template match="t:biblScope">

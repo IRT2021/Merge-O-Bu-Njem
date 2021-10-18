@@ -3,7 +3,7 @@
       <fileDesc>
          <titleStmt>
             <title>keiner</title>
-            <editor xml:id="GB" role="translation (English); merge script">Gabriel Bodard</editor>            <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>            <editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor>          </titleStmt>
+            <editor xml:id="GB" role="translation (English); merge script">Gabriel Bodard</editor>            <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>            </titleStmt>
          <publicationStmt><authority>Centre for Computing in the Humanities, King's College London</authority>
             <idno type="filename">IRT1501</idno>            <idno type="hgv">73151</idno>
             <idno type="TM">73151</idno>
@@ -86,7 +86,8 @@
          <div type="commentary" subtype="general">
             <p>Tage: 14. - 24. Jan. Lateinisch.</p>
          </div>
-         <div type="bibliography">            <p><bibl><ptr target="OBuNjem"/> <citedRange unit="numbers">1</citedRange></bibl></p></div>
+         <div type="bibliography">            <p><bibl><ptr target="OBuNjem"/> <citedRange unit="numbers">1</citedRange></bibl>; <bibl><title>Heidelberger Gesamtverzeichnis</title> <citedRange>73151</citedRange></bibl>, <bibl><title>Duke Databank of Documentary Papyri</title> <citedRange>o.bu.njem.1</citedRange></bibl>.
+    </p></div>
          
       </body>
    </text>
