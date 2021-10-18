@@ -183,6 +183,7 @@
                 <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
                 <xsl:apply-templates select="document(concat('../translation/',$hgvno,'.xml'))//t:div[@type='translation']"/>
             </xsl:if>-->
+            <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
             <xsl:apply-templates/>
         </xsl:copy>
     </xsl:template>
@@ -192,6 +193,20 @@
     </xsl:template>
     
     <xsl:template match="t:div[@type='bibliography'][@subtype='illustrations']"/>
+    
+    <xsl:template match="t:div[@type='bibliography'][@subtype='principalEdition']">
+        <div type="bibliography">
+            <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
+            <p><xsl:apply-templates select="t:listBibl/t:bibl"/></p>
+        </div>
+    </xsl:template>
+    
+    <xsl:template match="t:bibl">
+        <xsl:copy>
+            <ptr target="OBuNjem"/>
+            <xsl:apply-templates select="t:biblScope"/>
+        </xsl:copy>
+    </xsl:template>
     
     <xsl:template match="t:biblScope">
         <citedRange>
