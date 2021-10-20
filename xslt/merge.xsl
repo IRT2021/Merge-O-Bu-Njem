@@ -85,7 +85,7 @@
             <xsl:copy-of select="@*"/>
             <xsl:apply-templates/>
             <xsl:text disable-output-escaping="yes">   </xsl:text>
-            <editor xml:id="GB" role="translation (English); merge script">Gabriel Bodard</editor>
+            <editor xml:id="GB" role="translation (English); encoding; scripting">Gabriel Bodard</editor>
             <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
             <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>
             <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
@@ -97,8 +97,10 @@
     <xsl:template match="t:publicationStmt">
         <xsl:copy>
             <xsl:copy-of select="@*"/>
-            <xsl:text disable-output-escaping="yes">&#13;</xsl:text>
-            <authority>Centre for Computing in the Humanities, King's College London</authority>
+            <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
+            <publisher>Society for Libyan Studies</publisher>
+            <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
+            <distributor>King’s College London</distributor>
             <xsl:apply-templates/>
         </xsl:copy>
     </xsl:template>
@@ -112,13 +114,13 @@
     <xsl:template match="t:msIdentifier">
         <msIdentifier>
             <repository ref="institution.xml#db1098">Tripoli National Museum</repository>
-            <idno/>
+            <idno><xsl:text> </xsl:text></idno>
         </msIdentifier>
     </xsl:template>
     
     <xsl:template match="t:origPlace">
         <xsl:copy>
-            <xsl:text>Findspot.</xsl:text>
+            <xsl:text>Unknown.</xsl:text>
         </xsl:copy>
     </xsl:template>
     
@@ -147,7 +149,7 @@
          </supportDesc>
          <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
          <layoutDesc>
-             <layout><rs type="execution" key="dipinti">Painted</rs> on one face.</layout>
+             <layout><rs type="execution" key="pictura">Painted</rs> on one face.</layout>
          </layoutDesc>
         </xsl:copy>
         <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
@@ -175,8 +177,11 @@
                     <geogName type="modernCountry" key="LY">Libya</geogName>
                 </term>
                 <term>
-                    <placeName type="modernFindspot" key="https://www.slsgazetteer.org/658">Bu Njem</placeName>
+                    <placeName type="modernFindspot" ref="https://www.slsgazetteer.org/658">Bu Njem</placeName>
                 </term>
+                <term><ref type="pleiades" target="https://pleiades.stoa.org/places/344377">Gholaia</ref></term>
+                <term><ref type="geonames" target="https://www.geonames.org/2220431">Qaryat Bū Nujaym</ref></term>
+                <term><placeName xml:lang="ar">بو نجيم</placeName></term>
             </keywords>
         </textClass>
     </xsl:template>
