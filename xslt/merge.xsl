@@ -127,7 +127,12 @@
     <xsl:template match="t:origDate">
         <xsl:copy>
             <xsl:copy-of select="@*"/>
-            <xsl:attribute name="evidence" select="'occupation'"/>
+            <xsl:attribute name="evidence">
+                <xsl:choose>
+                    <xsl:when test="contains(@notBefore,'-') or contains(@notAfter,'-')">internal</xsl:when>
+                    <xsl:otherwise>context</xsl:otherwise>
+                </xsl:choose>
+            </xsl:attribute>
             <xsl:apply-templates/>
         </xsl:copy>
     </xsl:template>
