@@ -102,6 +102,12 @@
             <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
             <distributor>King’s College London</distributor>
             <xsl:apply-templates/>
+            <availability>
+                <xsl:text disable-output-escaping="yes">&#13;              </xsl:text>
+                <p>Creative Commons licence Attribution 4.0 (<ref>http://creativecommons.org/licenses/by/4.0/</ref>). All reuse or distribution of this work must link back to the URL <ref>http://irt.kcl.ac.uk/</ref></p>
+                <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
+            </availability>
+            <xsl:text disable-output-escaping="yes">&#13;         </xsl:text>
         </xsl:copy>
     </xsl:template>
     
