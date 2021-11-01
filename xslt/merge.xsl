@@ -89,8 +89,8 @@
             <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
             <editor xml:id="UG" role="translation (Arabic)">Usama Gad</editor>
             <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
-            <!--<editor xml:id="SV" role="translation (English)">Scott Vanderbilt</editor>
-            <xsl:text disable-output-escaping="yes">&#13;          </xsl:text>-->
+            <xsl:comment><xsl:text disable-output-escaping="yes">&lt;editor xml:id="SV" role="translation (English)">Scott Vanderbilt&lt;/editor></xsl:text></xsl:comment>
+            <xsl:text disable-output-escaping="yes">&#13;          </xsl:text>
         </xsl:copy>
     </xsl:template>
     
