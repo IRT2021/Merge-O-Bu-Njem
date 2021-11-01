@@ -233,7 +233,7 @@
             <ptr target="OBuNjem"/>
             <xsl:text> </xsl:text>
             <xsl:apply-templates select="t:biblScope"/>
-        </xsl:copy><xsl:text>; whence </xsl:text>
+        </xsl:copy><xsl:text>; from which </xsl:text>
         <bibl><title>Heidelberger Gesamtverzeichnis</title><xsl:text> </xsl:text><citedRange><xsl:value-of select="//t:idno[@type='filename']"/></citedRange></bibl><xsl:text>, </xsl:text>
         <bibl><title>Duke Databank of Documentary Papyri</title><xsl:text> </xsl:text><citedRange><xsl:value-of select="//t:idno[@type='ddb-filename']"/></citedRange></bibl>.
     </xsl:template>
