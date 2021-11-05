@@ -145,7 +145,7 @@
     
     <xsl:template match="t:provenance[@type='located']">
         <provenance type="found">
-            <p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu Njem</placeName>: <placeName type="monuList" ref="https://www.slsgazetteer.org/826">Fort</placeName>.</p>
+            <p><placeName type="ancientFindspot" ref="https://www.slsgazetteer.org/658">Bu Njem</placeName>: <placeName ref="https://www.slsgazetteer.org/826">Fort</placeName>, in the <placeName ref="https://www.slsgazetteer.org/2268" type="monuList">Principia</placeName>.</p>
         </provenance>
         <xsl:text disable-output-escaping="yes">&#13;            </xsl:text>
         <provenance type="observed">
@@ -233,7 +233,7 @@
             <ptr target="OBuNjem"/>
             <xsl:text> </xsl:text>
             <xsl:apply-templates select="t:biblScope"/>
-        </xsl:copy><xsl:text>; from which </xsl:text>
+        </xsl:copy><xsl:text>, whence </xsl:text>
         <bibl><title>Heidelberger Gesamtverzeichnis</title><xsl:text> </xsl:text><citedRange><xsl:value-of select="//t:idno[@type='filename']"/></citedRange></bibl><xsl:text>, </xsl:text>
         <bibl><title>Duke Databank of Documentary Papyri</title><xsl:text> </xsl:text><citedRange><xsl:value-of select="//t:idno[@type='ddb-filename']"/></citedRange></bibl>.
     </xsl:template>
